@@ -16,11 +16,12 @@ window.data = {
         } //for if If
       } //For IF
     } // For
-    // console.log(yearResult,userResult);
+
     return [yearResult, userResult]
   }, //Consult
+
   order: (injuriesBy, yearValue, userValue) => {
-    //const yearFound = injuriesBy.find(element => element.Year == yearValue);
+
     let yearFind = "";
     injuriesBy.forEach(element => {
       let year = element.Year;
@@ -29,10 +30,10 @@ window.data = {
       let walk = element.Total_Injured_Persons_Pedestrians;
       let transit = element.Total_Injured_Persons_Transit_Total;
       //let allInjured = [moto, bike, walk, transit];
-      if (yearValue === year && userValue === "all") {
-        yearFind = [year.substr(0, 4), moto, bike, walk, transit];
-      }
-    }) //ForEach
-    return yearFind;
-  }, //Order
+        if (yearValue === year && userValue === "all") {
+            yearFind = [year.substr(0,4), moto, bike, walk, transit];
+        }
+      }) //ForEach
+      return yearFind;
+  },
 }; //window
