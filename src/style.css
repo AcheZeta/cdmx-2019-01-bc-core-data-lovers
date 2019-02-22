@@ -2,7 +2,6 @@ nav {
   display: block;
 }
 
-
 header {
   background: white;
   display: inline-block;
@@ -17,15 +16,36 @@ figure {
   display: inline-block;
 }
 
-#menu {
-  width: 10%;
-  height: auto;
-  vertical-align: top;
+td,
+th {
+  border: 1px solid #ffffff;
+  background: black;
+  color: aliceblue;
+  text-align: center;
+  font-family: sans-serif;
   padding: 2%;
-  padding-top: 9%;
-  float: right;
-  margin: 0%;
+  width: 1%;
 }
+
+th {
+  color: #eb008b;
+}
+
+h2 {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-family: sans-serif;
+  text-align: justify;
+  padding: 10%;
+  font-size: 14px;
+  margin: 0;
+}
+
 
 .logo {
   width: 15%;
@@ -51,16 +71,17 @@ figure {
 }
 
 .nav__item {
-     display:block;
-     width:70%;
-     margin:0 auto;
-     line-height:4;
-     position:relative; /*Le damos una posición relativa para posteriormente añadirle el triangulo que indica que se está en la página actual del menú*/
-     border-bottom:.5px solid rgba(59, 62, 61, 1);
-     border-top:.5px solid rgba(59, 62, 61, 1);
-     background-color:transparent;
-     color:rgba(221, 231, 228, 1);
-   }
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  line-height: 4;
+  position: relative;
+  /*Le damos una posición relativa para posteriormente añadirle el triangulo que indica que se está en la página actual del menú*/
+  border-bottom: .5px solid rgba(59, 62, 61, 1);
+  border-top: .5px solid rgba(59, 62, 61, 1);
+  background-color: transparent;
+  color: rgba(221, 231, 228, 1);
+}
 
 .menu-toogle {
   position: absolute;
@@ -72,52 +93,45 @@ figure {
   background-color: transparent;
   transition: all .5s ease;
   z-index: 10;
-  }
+}
 
-  .menu-toogle::before {
-    content: "☰";
-   font-size: 33px;
-   color: #eb008b;
-   }
+.menu-toogle::before {
+  content: "☰";
+  font-size: 33px;
+  color: #eb008b;
+}
 
-.tableData{
+.tableData {
   height: auto;
   width: 100%;
   margin-block-start: 3%;
   margin-block-end: 3%;
 
 }
-   td, th {
-    border: 1px solid #ffffff;
-    background: black;
-    color: aliceblue;
-    text-align: center;
-    font-family: sans-serif;
-    padding: 2%;
-    width: 1%;
-   }
 
-   th{
-     color: #eb008b;
-   }
+.checkbox {
+  float: right;
+  display: none;
+  /*Ocultamos el checkbox pues no nos interesa que se vea*/
+}
 
-   .checkbox {
-     float: right;
-      display: none;/*Ocultamos el checkbox pues no nos interesa que se vea*/
-   }
-   .checkbox:checked ~ .sidebar {
-     right:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
-     position:fixed; /* Fijamos el menú lateral para que se desplace cuando hagamos scroll*/
-   }
-   .checkbox:checked ~ .main-w {
-     margin-right:200px; /*Cuando el checkbox asigna un margen al contenedor principal para que se desplace junto con el menú*/
-   }
-   .checkbox:checked ~ .menu-toogle {
-     right:208px;
-     position:fixed; /*Fijamos la hamburgues para que se desplace junto con el menú*/
-   }
+.checkbox:checked~.sidebar {
+  right: 0px;
+  /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+  position: fixed;
+  /* Fijamos el menú lateral para que se desplace cuando hagamos scroll*/
+}
 
+.checkbox:checked~.main-w {
+  margin-right: 200px;
+  /*Cuando el checkbox asigna un margen al contenedor principal para que se desplace junto con el menú*/
+}
 
+.checkbox:checked~.menu-toogle {
+  right: 208px;
+  position: fixed;
+  /*Fijamos la hamburgues para que se desplace junto con el menú*/
+}
 
 .info {
   background-color: #eb008b;
@@ -132,19 +146,13 @@ figure {
   font-kerning: none;
 }
 
-.button1{
+.button1 {
   text-align: center;
   background: #231f20;
   width: 50%;
   height: auto;
   border-radius: 4%;
   padding: 5%;
-}
-
-#consulta{
-  color: white;
-  text-decoration: none;
-  display: inline-block;
 }
 
 .button {
@@ -163,7 +171,6 @@ figure {
   border-radius: 16px;
 }
 
-
 .total {
   background-color: #231f20;
   width: auto;
@@ -171,30 +178,6 @@ figure {
   padding: 5%;
   color: #eb008b;
   display: block;
-}
-
-h2 {
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-p {
-  color: white;
-  font-family: sans-serif;
-  text-align: justify;
-  padding: 10%;
-  font-size: 14px;
-  margin: 0;
-}
-
-#totalInjured {
-  color: #eb008b;
-  font-family: sans-serif;
-  padding: 10px;
-  font-size: 28px;
-  text-align: center;
-  margin: 0%;
 }
 
 .icon {
@@ -210,11 +193,6 @@ p {
   height: 100%;
 }
 
-#knowMore {
-  color: black;
-  margin-top: 50px;
-}
-
 .image {
   display: block;
   width: 99%;
@@ -228,11 +206,11 @@ p {
   width: 99%;
   height: auto;
   padding: 0.5%;
-  }
+}
 
-.consulta  {
-    text-align: center;
-  }
+.consulta {
+  text-align: center;
+}
 
 .select {
   margin-top: 4%;
@@ -259,13 +237,24 @@ p {
   font-family: sans-serif;
 }
 
-table{
+table {
   width: 50%;
   text-align: center;
   margin: 1% 1% 1% 25%;
 }
 
 .photos {
+  background-color: #eb008b;
+width: auto;
+height: 30%;
+align-content: center;
+margin-block-start: 1%;
+vertical-align: bottom;
+text-align: center;
+padding: 3%;
+}
+
+.fqa {
   background-color: #eb008b;
   width: auto;
   height: 100%;
@@ -274,23 +263,17 @@ table{
   vertical-align: bottom;
 }
 
-.question{
+
+.question {
   padding: 5%;
 }
 
 footer {
-  background-color: #231f20;
+  background-color: #eb008b;
   width: auto;
   height: 100%;
   text-align: center;
-
-}
-
-#footer {
-  font-size: 60%;
-  text-align: center;
-  vertical-align: bottom;
-  padding-top: 8%;
+  margin-block-start: 1%;
 }
 
 .redes {
@@ -306,6 +289,43 @@ footer {
 }
 
 
+#knowMore {
+  color: black;
+  margin-top: 50px;
+}
+
+#footer {
+  font-size: 60%;
+  text-align: center;
+  vertical-align: bottom;
+  padding-top: 8%;
+}
+
+#consulta {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#totalInjured {
+  color: #eb008b;
+  font-family: sans-serif;
+  padding: 10px;
+  font-size: 28px;
+  text-align: center;
+  margin: 0%;
+}
+
+#menu {
+  width: 10%;
+  height: auto;
+  vertical-align: top;
+  padding: 2%;
+  padding-top: 9%;
+  float: right;
+  margin: 0%;
+}
+
 /*
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -313,10 +333,10 @@ footer {
 
 @media (min-width: 1281px) {
 
-.logo{
-  width: 4%;
-  height: auto;
-  padding: 1%;
+  .logo {
+    width: 4%;
+    height: auto;
+    padding: 1%;
   }
 
   .total {
@@ -328,12 +348,6 @@ footer {
     display: block;
   }
 
-  p {
-    color: white;
-    font-family: sans-serif;
-    padding: 1%;
-    font-size: 14px;
-  }
 
   .icon {
     display: inline-block;
@@ -349,75 +363,92 @@ footer {
     text-align: center;
   }
 
-  .redes {
-
-    width: 20%;
-    height: auto;
-    padding-top: 8%;
+  header {
+    width: 100%;
   }
 
-  header{
-    width: 100%;
-    }
+  h3 {
+    font-size: x-large;
+  }
 
-    h3{
-      font-size: x-large;
-    }
-
-.button1{
-  text-align: center;
+  .button1 {
+    text-align: center;
     background: #231f20;
     width: 16%;
     height: auto;
     border-radius: 3%;
     padding: 3%;
-}
-#infoSecI{
-  width: 25%;
-}
+  }
 
-#totalParraph{
-  width: 42%;
-  padding: 3%;
-  margin: 1% 1% 1% 24%;
-}
+  #infoSecI {
+    width: 80%;
+    text-align: center;
+    padding: 0%
+  }
 
-h2{
-  font-size: -webkit-xxx-large;
-}
+  #totalParraph {
+    width: 42%;
+    padding: 3%;
+    margin: 1% 1% 1% 24%;
+  }
 
-.final{
-  width: 47%;
-  margin-top: 2%
-}
+  h2 {
+    font-size: -webkit-xxx-large;
+  }
 
-.image{
-  padding-block-start: 2%;
-}
+  .final {
+    width: 47%;
+    margin-top: 2%
+  }
 
-.imagepeaton{
-  display: inline-block;
-  width: 40%;
-  margin-left: 30%;
-}
+  .image {
+    padding-block-start: 2%;
+  }
 
-.question{
-  padding: 1%;
-}
+  .imagepeaton {
+    display: inline-block;
+    width: 40%;
+    margin-left: 30%;
+  }
 
-.image{
-  display: inline-block;
-  width: 32%;
-}
+  .question {
+    padding: 1%;
+  }
 
+  .image {
+    display: inline-block;
+    width: 32%;
+  }
+
+  .photos {
+    background-color: #eb008b;
+    width: auto;
+    height: 30%;
+    align-content: center;
+    margin-block-start: 1%;
+    vertical-align: bottom;
+    text-align: center;
+    padding: 3%;
+  }
+
+  .fqa{
+    background-color: #231f20;
+    width: auto;
+    height: 100%;
+    align-content: center;
+    margin-block-start: 4%;
+    vertical-align: bottom;
+    padding: 3%;
+}
+  }
 }
 
 
 @media (min-width: 1024px) and (max-width: 1380px) {
 
-  header{
+  header {
     width: 100%;
-    }
+  }
 
   .logo {
     width: 10%;
@@ -425,45 +456,28 @@ h2{
     padding: 1%
   }
 
-.info{
-  margin-block-start: 0%;
-}
-
-  .sidebar {
-  right: -1557px;
-  padding-top: 47px;
+  .info {
+    margin-block-start: 0%;
   }
 
-.menu-toogle{
+  .sidebar {
+    right: -1557px;
+    padding-top: 47px;
+  }
+
+  .menu-toogle {
     top: 19px;
   }
 
-  #infoSecI{
-    font-size: 14px;
-    margin: 4% 0% 6% 0%;
+  #consulta {
+    color: white;
+    text-decoration: none;
     display: inline-block;
-    float: left;
   }
 
-  #map{
-  display: inline-block;
-  width: 44%;
-  height: auto;
-  padding: 1.5%;
-  padding-block-start: 5%;
-  }
-
-
-  .image{
-    display: inline-block;
-    width: 32%;
-  }
-
-  .question{
-    padding: 1%;
-  }
 
 }
+
 /*
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
@@ -471,9 +485,9 @@ h2{
 
 @media (min-width: 767px) and (max-width: 1023px) {
 
-  header{
+  header {
     width: 100%;
-    }
+  }
 
 
   .logo {
@@ -482,7 +496,7 @@ h2{
     padding: 3%;
   }
 
-  .info{
+  .info {
     margin-block-start: 0%;
   }
 
@@ -496,13 +510,14 @@ h2{
   }
 
   .sidebar {
-  right: -656px;
-  padding-top: 47px;
+    right: -656px;
+    padding-top: 47px;
   }
 
 
 
 }
+
 /*
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
@@ -510,7 +525,7 @@ h2{
 
 @media (min-width: 300px) and (max-width: 767px) {
 
-  header{
+  header {
     width: 100%;
   }
 
@@ -523,8 +538,8 @@ h2{
 
 
   .sidebar {
-  right: -435px;
-  padding-top: 47px;
+    right: -435px;
+    padding-top: 47px;
   }
 
 

@@ -1,52 +1,43 @@
-//Declaramos input del año
-let yearbutton = document.getElementById("yearbttn");
-//Declaramos input del usurio
-let userbutton = document.getElementById("user");
-//Declaramos input del consulta
-let searchbutton = document.getElementById("search");
-//Constante de la sección know del HTML
-const resultsecc = document.getElementById("result");
-//Constante que contiene la data
+//Data
 const injuriesBy = window.INJURIES;
-//Constante que contiene la tabla
-const table = document.getElementById('table');
+//Input de Año
+let yearButton = document.getElementById("yearbttn");
+//Input del usuario
+let userButton = document.getElementById("user");
+//Input de la sección consulta
+let searchButton = document.getElementById("search");
+//Constante de la sección know del HTML
+const resultArea = document.getElementById("result");
+// usuarios
 
+drawTable = (allValue) => {
+  //Constante que contiene la tabla
+  const tableArea = document.getElementById('table');
+  resultArea.innerHTML = '';
 
+  for (let j = 0; j < allValue.length; j++) {
+    tableArea.innerHTML = `${allValue}`
+    //   `<table>
+    // <tr>
+    //   <th scope = "col">AÑO</th>
+    //   <th scope = "col">TIPO DE HERIDO</th>
+    //   <th scope = "col">TOTAL</th>
+    // </tr>
+
+    // <tr><td>${yearValor[j]}</td></tr>
+    // `
+  }
+}
 //Función al botón de consulta. Toma los inputs y Obtiene su Valor. Ejecuta la función consult y muestra el resultado.
-searchbutton.addEventListener("click", () => {
-  let yearValue = yearbutton.value;
-  let userValue = userbutton.value;
+searchButton.addEventListener("click", () => {
+  let yearValue = yearButton.value;
+  let userValue = userButton.value;
   if (userValue === 'all') {
-    resultsecc.innerHTML = '';
-    const resultDatos = window.data.order(injuriesBy, yearValue, userValue);
-    table.innerHTML = `          <table>
-                <tr>
-                  <th> AÑO </th>
-                  <th> TIPO DE HERIDO </th>
-                  <th> TOTAL </th>
-                  </tr>
-                  <tr>
-                    <td rowspan="4"> ${resultDatos[0]} </td>
-                    <td> MOTOCICLISTA </td>
-                    <td> ${resultDatos[1]} </td>
-                  </tr>
-                  <tr>
-                    <td> CICLISTA </td>
-                    <td> ${resultDatos[2]} </td>
-                  </tr>
-                  <tr>
-            <td> PEATON </td>
-            <td> ${resultDatos[3]} </td>
-        </tr>
-        <tr>
-          <td> AUTOMOVILISTAS </td>
-          <td> ${resultDatos[4]} </td>
-      </tr>
-              </table>`
+    const AllResult = window.data.allData(injuriesBy, yearValue, userValue);
+    drawTable(AllResult)
   } else {
-
     table.innerHTML = '';
     const resultData = window.data.consult(injuriesBy, yearValue, userValue);
-    resultsecc.innerHTML = `<b>Año:</b>${resultData[0]} <b>Total de heridos:</b>${resultData[1]}`;
+    resultArea.innerHTML = `<b>Año: </b>${resultData[0]} <br> <b>Total de heridos: </b>${resultData[1]}`;
   }
 });
