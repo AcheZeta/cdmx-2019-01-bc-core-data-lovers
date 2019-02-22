@@ -25,30 +25,21 @@ window.data = {
   }, //Consult
 
   allData: (injuriesBy, yearValue, userValue) => {
-
-    let yearFind = [];
     let allValue = {}
     injuriesBy.forEach(element => {
       let year = element.Year;
-      let moto = element.Total_Injured_Persons_Motorcyclists;
-      let bike = element.Total_Injured_Persons_Pedalcyclists;
-      let walk = element.Total_Injured_Persons_Pedestrians;
-      let transit = element.Total_Injured_Persons_Transit_Total;
-      //let allInjured = [moto, bike, walk, transit];
+
       if (yearValue === year && userValue === "all") {
-        //yearFind.push(year.substr(0, 4), moto, bike, walk, transit);
         allValue = {
-          Año: element.Year,
-          Motociclistas: element.Total_Injured_Persons_Motorcyclists,
-          Peaton: element.Total_Injured_Persons_Pedestrians,
-          Ciclistas: element.Total_Injured_Persons_Pedalcyclists,
-          Automovilistas: element.Total_Injured_Persons_Transit_Total
+          date:["Año:", element.Year.substr(0,4)],
+          moto:["Motociclistas", element.Total_Injured_Persons_Motorcyclists],
+          walk:["Peatones", element.Total_Injured_Persons_Pedestrians],
+          bike:["Ciclistas", element.Total_Injured_Persons_Pedalcyclists],
+          auto:["Automovilistas", element.Total_Injured_Persons_Transit_Total]
         }
       }
     }) //ForEach
     console.log(allValue)
     return allValue
   },
-
-
 }; //window

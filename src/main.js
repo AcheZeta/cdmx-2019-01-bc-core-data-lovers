@@ -10,24 +10,14 @@ let searchButton = document.getElementById("search");
 const resultArea = document.getElementById("result");
 // usuarios
 
-drawTable = (allValue) => {
+drawTable = (allValue, yearValue, userValue) => {
+  const allData = window.data.consult(injuriesBy, yearValue, userValue);
   //Constante que contiene la tabla
   const tableArea = document.getElementById('table');
   resultArea.innerHTML = '';
-
-  for (let j = 0; j < allValue.length; j++) {
-    tableArea.innerHTML = `${allValue}`
-    //   `<table>
-    // <tr>
-    //   <th scope = "col">AÑO</th>
-    //   <th scope = "col">TIPO DE HERIDO</th>
-    //   <th scope = "col">TOTAL</th>
-    // </tr>
-
-    // <tr><td>${yearValor[j]}</td></tr>
-    // `
-  }
+  tableArea.innerHTML = `${allValue.date}<br>${allValue.moto}<br>${allValue.walk}<br>${allValue.bike}<br>${allValue.auto}`
 }
+
 //Función al botón de consulta. Toma los inputs y Obtiene su Valor. Ejecuta la función consult y muestra el resultado.
 searchButton.addEventListener("click", () => {
   let yearValue = yearButton.value;
