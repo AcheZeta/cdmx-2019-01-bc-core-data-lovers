@@ -5,41 +5,33 @@ window.data = {
     //Variables que guardan en resultado de la busqueda
     let yearResult = "";
     let userResult = "";
-    let injuredPerson = "";
-
     //Usamos FIND para buscar el año dentro del objeto.
     const yearFound = injuriesBy.find(element => element.Year == yearValue);
     //Dentro de un ciclo FOR buscamos las Key y comparamos con el valor del Usuario.
     for (const key in yearFound) {
-      injuredPerson = key
+      const injuredPerson = key
       if (yearFound.hasOwnProperty(key)) {
         const element = yearFound[key];
         if (key == userValue) {
           yearResult = yearValue.substr(0, 4);
           userResult = element;
-        } //for if If
-      } //For IF
-    } // For
+          injuredPerson;
+        }
+      }
+    }
 
     return [yearResult, userResult]
   }, //Consult
 
   allData: (injuriesBy, yearValue, userValue) => {
-    let allValue = {}
+    let allValue = []
     injuriesBy.forEach(element => {
       let year = element.Year;
-
       if (yearValue === year && userValue === "all") {
-        allValue = {
-          date:["Año:", element.Year.substr(0,4)],
-          moto:["Motociclistas", element.Total_Injured_Persons_Motorcyclists],
-          walk:["Peatones", element.Total_Injured_Persons_Pedestrians],
-          bike:["Ciclistas", element.Total_Injured_Persons_Pedalcyclists],
-          auto:["Automovilistas", element.Total_Injured_Persons_Transit_Total]
-        }
+        allValue.push(["Año:", element.Year.substr(0, 4)], ["Motociclistas", element.Total_Injured_Persons_Motorcyclists], ["Peatones", element.Total_Injured_Persons_Pedestrians], ["Ciclistas", element.Total_Injured_Persons_Pedalcyclists],
+          ["Automovilistas", element.Total_Injured_Persons_Transit_Total])
       }
-    }) //ForEach
-    console.log(allValue)
+    })
     return allValue
-  },
+  }, //AllData 
 }; //window
