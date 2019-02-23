@@ -34,4 +34,10 @@ window.data = {
     })
     return allValue
   }, //AllData 
+
+  // orderBy: (injuriesBy, yearValue, userValue) => {
+  //   const ordenList = allValue.sort((a,b) => a.index - b.index).map((allValue, index, array) => allValue.name)
+  //   console.log(ordenList
+  // }
+
 }; //window
