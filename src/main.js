@@ -11,17 +11,27 @@ const resultArea = document.getElementById("result");
 
 
 const drawTable = (allValue) => {
-  // const allData = window.data.consult(injuriesBy, yearValue, userValue);
   //Constante que contiene la tabla
   const tableArea = document.getElementById('tableData');
   resultArea.innerHTML = '';
-  tableArea.innerHTML =  `${allValue}`   
-
+  for (let i =0; i < allValue.length; i++){
+    const column = `<tr><td>${allValue[i][0]}</td><td>${allValue[i][1]}</td>`
+    const row = document.createElement("tr");
+    row.innerHTML= column;
+    tableArea.appendChild(row)
+  }
   orden.addEventListener("click", () => {
     resultArea.innerHTML = '';
-    tableArea.innerHTML =  `${allValue.sort()}`   
+    const sortTable = allValue.sort()
+    for (let i =0; i < sortTable.length; i++){
+      const column = `<tr><td>${sortTable[i][0]}</td><td>${sortTable[i][1]}</td>`
+      const row = document.createElement("tr");
+      row.innerHTML= column;
+      tableArea.appendChild(row)
+    }
   })
-}
+};
+
 
 //Función al botón de consulta. Toma los inputs y Obtiene su Valor. Ejecuta la función consult y muestra el resultado.
 searchButton.addEventListener("click", () => {
@@ -38,34 +48,3 @@ if (userValue === 'all') {
 }
 });
 
-
-
-// orden.addEventListener("click", () => {
-//   let rows
-//   let switching
-//   let i
-//   let x
-//   let y
-//   let shouldSwitch
-//   // tabla
-//   const table = document.getElementById("tableTable")
-
-
-//   switching = true;
-//   while (switching) {
-//     rows = table.rows;
-//     for (i = 1; i < rows.length - 1; i++) {
-//       shouldSwitch = false;
-//       x = rows[i].getElementByTagName("TD")[0];
-//       y = rows[i].getElementByTagName("TD")[0];
-//       if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-//         shouldSwitch = true;
-//         break;
-//       }
-
-//       if (shouldSwitch) {
-//         rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-//         switching = true;
-//       }
-//     }
-//   }
