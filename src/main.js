@@ -12,9 +12,12 @@ let resultArea = document.getElementById("result");
 let tableArea = document.getElementById('tableData');
 //DIV que contiene la tabla
 let tableOrden = document.getElementById('tableOrden');
+//boton de ordenar 
+let orden = document.getElementById('orden')
 
 //Función que pinta la habla predeterminada
 const drawTable = (allValue) => {
+  
   //Mantener libre resultArea
   resultArea.innerHTML = '';
   //Por cada elemento de la data pintara columna y fila
@@ -42,7 +45,7 @@ const drawTable = (allValue) => {
 
 //Función al botón de consulta. Toma los inputs y Obtiene su Valor. Ejecuta la función consult y muestra el resultado.
 searchButton.addEventListener("click", () => {
-
+  
   let yearValue = yearButton.value;
   let userValue = userButton.value;
   if (userValue === 'all') {
