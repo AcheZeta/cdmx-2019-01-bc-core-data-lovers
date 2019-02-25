@@ -9,9 +9,11 @@ let searchButton = document.getElementById("search");
 //Constante de la sección know del HTML
 let resultArea = document.getElementById("result");
 //Sección que contiene DIV table
-let tableArea = document.getElementById('tableData');
+let tableArea = document.getElementById('tableD');
 //DIV que contiene la tabla
-let tableOrden = document.getElementById('tableOrden');
+let tableOrden = document.getElementById('tableO');
+//Sección que contiene DIV table
+let sectionTable = document.getElementById('tableData');
 //boton de ordenar 
 let orden = document.getElementById('orden')
 
@@ -29,7 +31,7 @@ const drawTable = (allValue) => {
   }
   //Función que ordena la data
   orden.addEventListener("click", () => {
-    tableArea.style.display = "none";
+    sectionTable.style.display = "none";
     resultArea.innerHTML = '';
     for (let i = 0; i < allValue.length; i++) {
       const sortTable = allValue.sort((a, b) => a[1] - b[1])

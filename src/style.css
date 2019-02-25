@@ -427,16 +427,30 @@ footer {
     padding-block-start: 0%;
     display: inline-block;
 }
-.tableData {
+
+table {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+#tableD {
 
   height: auto;
   width: 50%;
   margin-block-start: 0%;
   margin-block-end: 0%;
   margin: auto;
-
 }
 
+#tableO {
+
+  height: auto;
+  width: 50%;
+  margin-block-start: 0%;
+  margin-block-end: 0%;
+  margin: auto;
+}
 }
 
 
@@ -504,14 +518,30 @@ footer {
     display: inline-block;
 }
 
-.tableData {
+table {
+
+  width: 50%;
+  text-align: center;
+  margin: auto;
+
+}
+
+#tableD {
 
   height: auto;
   width: 50%;
   margin-block-start: 0%;
   margin-block-end: 0%;
   margin: auto;
+}
 
+#tableO {
+
+  height: auto;
+  width: 50%;
+  margin-block-start: 0%;
+  margin-block-end: 0%;
+  margin: auto;
 }
 }
 
