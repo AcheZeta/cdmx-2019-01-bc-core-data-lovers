@@ -2,7 +2,6 @@ nav {
   display: block;
 }
 
-
 header {
   background: white;
   display: inline-block;
@@ -17,14 +16,39 @@ figure {
   display: inline-block;
 }
 
-#menu {
-  width: 10%;
-  height: auto;
-  vertical-align: top;
+td,
+th {
+  border: 1px solid #ffffff;
+  background: black;
+  color: aliceblue;
+  text-align: center;
+  font-family: sans-serif;
   padding: 2%;
-  padding-top: 9%;
-  float: right;
-  margin: 0%;
+  width: 1%;
+}
+
+th {
+  color: #eb008b;
+}
+
+h2 {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+h3 {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-family: sans-serif;
+  text-align: justify;
+  padding: 10%;
+  font-size: 14px;
+  margin: 0;
 }
 
 .logo {
@@ -104,21 +128,6 @@ figure {
 
 }
 
-td,
-th {
-  border: 1px solid #ffffff;
-  background: black;
-  color: aliceblue;
-  text-align: center;
-  font-family: sans-serif;
-  padding: 2%;
-  width: 1%;
-}
-
-th {
-  color: #eb008b;
-}
-
 .checkbox {
   float: right;
   display: none;
@@ -159,9 +168,9 @@ th {
   width: auto;
   height: 100%;
   margin-block-end: 0%;
-  margin-block-start: 10%;
+  margin-block-start: 15%;
   color: white;
-  text-align: justify;
+  text-align: center;
   font-family: sans-serif;
   padding: 7%;
   font-kerning: none;
@@ -176,11 +185,6 @@ th {
   padding: 5%;
 }
 
-#consulta {
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-}
 
 .button {
   margin: 5%;
@@ -208,30 +212,6 @@ th {
   display: block;
 }
 
-h2 {
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-p {
-  color: white;
-  font-family: sans-serif;
-  text-align: justify;
-  padding: 10%;
-  font-size: 14px;
-  margin: 0;
-}
-
-#totalInjured {
-  color: #eb008b;
-  font-family: sans-serif;
-  padding: 10px;
-  font-size: 28px;
-  text-align: center;
-  margin: 0%;
-}
-
 .icon {
   display: inline-block;
   width: 25%;
@@ -246,11 +226,6 @@ p {
   height: 100%;
 }
 
-#knowMore {
-  color: white;
-  margin-top: 2%;
-  text-align: center;
-}
 
 .find {
 
@@ -283,8 +258,7 @@ p {
 }
 
 .select {
-  margin-top: 4%;
-  padding: 2%;
+  padding: 4%;
   text-align: center;
 }
 
@@ -334,12 +308,6 @@ footer {
 
 }
 
-#footer {
-  font-size: 60%;
-  text-align: center;
-  vertical-align: bottom;
-  padding-top: 8%;
-}
 
 .redes {
   width: 55%;
@@ -355,6 +323,45 @@ footer {
 
 .fqa {
   background: #4b5148;
+}
+
+#footer {
+  font-size: 60%;
+  text-align: center;
+  vertical-align: bottom;
+  padding-top: 8%;
+}
+
+#knowMore {
+    color: white;
+    text-align: center;
+    margin-block-start: 0%;
+    padding: 4%;
+}
+
+#menu {
+  width: 10%;
+  height: auto;
+  vertical-align: top;
+  padding: 2%;
+  padding-top: 9%;
+  float: right;
+  margin: 0%;
+}
+
+#totalInjured {
+  color: #eb008b;
+  font-family: sans-serif;
+  padding: 10px;
+  font-size: 28px;
+  text-align: center;
+  margin: 0%;
+}
+
+#consulta {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
 }
 
 
@@ -420,37 +427,37 @@ footer {
     background-color: black;
   }
 
-.image {
+  .image {
     width: 32%;
     height: auto;
     padding: 0.5%;
     padding-block-start: 0%;
     display: inline-block;
-}
+  }
 
-table {
-  width: 50%;
-  text-align: center;
-  margin: auto;
-}
+  table {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
 
-#tableD {
+  #tableD {
 
-  height: auto;
-  width: 50%;
-  margin-block-start: 0%;
-  margin-block-end: 0%;
-  margin: auto;
-}
+    height: auto;
+    width: 50%;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    margin: auto;
+  }
 
-#tableO {
+  #tableO {
 
-  height: auto;
-  width: 50%;
-  margin-block-start: 0%;
-  margin-block-end: 0%;
-  margin: auto;
-}
+    height: auto;
+    width: 50%;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    margin: auto;
+  }
 }
 
 
@@ -510,39 +517,39 @@ table {
     background-color: black;
   }
 
-.image {
+  .image {
     width: 32%;
     height: auto;
     padding: 0.5%;
     padding-block-start: 0%;
     display: inline-block;
-}
+  }
 
-table {
+  table {
 
-  width: 50%;
-  text-align: center;
-  margin: auto;
+    width: 50%;
+    text-align: center;
+    margin: auto;
 
-}
+  }
 
-#tableD {
+  #tableD {
 
-  height: auto;
-  width: 50%;
-  margin-block-start: 0%;
-  margin-block-end: 0%;
-  margin: auto;
-}
+    height: auto;
+    width: 50%;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    margin: auto;
+  }
 
-#tableO {
+  #tableO {
 
-  height: auto;
-  width: 50%;
-  margin-block-start: 0%;
-  margin-block-end: 0%;
-  margin: auto;
-}
+    height: auto;
+    width: 50%;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    margin: auto;
+  }
 }
 
 /*
@@ -595,6 +602,7 @@ table {
     text-align: center;
     margin: 0%;
   }
+
   .tableData {
 
     height: auto;
@@ -603,7 +611,7 @@ table {
     margin-block-end: 0%;
     margin: auto;
 
-}
+  }
 }
 
 
@@ -628,7 +636,8 @@ table {
     font-family: sans-serif;
     padding: 11%;
     font-kerning: none;
-}
+  }
+
   .logo {
     width: 10%;
     height: auto;
@@ -640,37 +649,39 @@ table {
     right: -435px;
     padding-top: 47px;
   }
+
   .icon {
     display: inline-block;
     width: 15%;
     height: auto;
     padding: 3%;
     margin-left: 3%;
-}
+  }
 
-.image {
-  display: inline-block;
-  width: 30%;
-  height: auto;
-  padding: 1%;
-  padding-block-start: 7%;
-  margin: 0%;
-}
+  .image {
+    display: inline-block;
+    width: 30%;
+    height: auto;
+    padding: 1%;
+    padding-block-start: 7%;
+    margin: 0%;
+  }
 
-h2 {
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-  padding: 3%;
-}
-.tableData {
+  h2 {
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 3%;
+  }
 
-  height: auto;
-  width: 50%;
-  margin-block-start: 0%;
-  margin-block-end: 0%;
-  margin: auto;
+  .tableData {
 
-}
+    height: auto;
+    width: 50%;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    margin: auto;
+
+  }
 
 }

@@ -1,5 +1,6 @@
 //window es un objeto global que contiene la funcion consult.
 window.data = {
+  
   //Consult filtra el objeto apartir de año. 
   consult: (injuriesBy, yearValue, userValue) => {
     //Variables que guardan en resultado de la busqueda
@@ -28,7 +29,9 @@ window.data = {
     injuriesBy.forEach(element => {
       let year = element.Year;
       if (yearValue === year && userValue === "all") {
-        allValue.push(["Año:", element.Year.substr(0, 4)], ["Motociclistas", element.Total_Injured_Persons_Motorcyclists], ["Peatones", element.Total_Injured_Persons_Pedestrians], ["Ciclistas", element.Total_Injured_Persons_Pedalcyclists],
+        allValue.push(["Motociclistas", element.Total_Injured_Persons_Motorcyclists],
+          ["Peatones", element.Total_Injured_Persons_Pedestrians],
+          ["Ciclistas", element.Total_Injured_Persons_Pedalcyclists],
           ["Automovilistas", element.Total_Injured_Persons_Transit_Total])
       }
     })
