@@ -35,5 +35,9 @@ window.data = {
       }
     })
     return allValue
-  }, //AllData 
+  }, //AllData
+  orderData: (allValue) => {
+    let sortTable = allValue.sort((a, b) => a[1] - b[1])
+    return sortTable
+  }
 }; //window
