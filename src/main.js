@@ -58,4 +58,6 @@ searchButton.addEventListener("click", () => {
     const resultData = window.data.consult(injuriesBy, yearValue, userValue);
     resultArea.innerHTML = `<b>Año: </b>${resultData[0]} <br> <b>Total de heridos: </b>${resultData[1]}`;
   }
+
 });
+
