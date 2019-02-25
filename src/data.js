@@ -20,7 +20,6 @@ window.data = {
         }
       }
     }
-
     return [yearResult, userResult]
   }, //Consult
 

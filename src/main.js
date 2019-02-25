@@ -23,7 +23,6 @@ const drawTable = (allValue) => {
   tableArea.innerHTML = `<tr><th colspan = "2">${yearV.substr(0,4)}</th></tr>`
 
   //Por cada elemento de la data pintara columna y fila
-
   for (let i = 0; i < allValue.length; i++) {
     const column = `<tr><td>${allValue[i][0]}</td><td>${allValue[i][1]}</td>`
     const row = document.createElement("tr");
