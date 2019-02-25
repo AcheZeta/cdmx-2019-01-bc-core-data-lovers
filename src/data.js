@@ -1,35 +1,39 @@
 //window es un objeto global que contiene la funcion consult.
 window.data = {
+  
+  //Consult filtra el objeto apartir de año. 
   consult: (injuriesBy, yearValue, userValue) => {
     //Variables que guardan en resultado de la busqueda
     let yearResult = "";
     let userResult = "";
     //Usamos FIND para buscar el año dentro del objeto.
     const yearFound = injuriesBy.find(element => element.Year == yearValue);
-      //Dentro de un ciclo FOR buscamos las Key y comparamos con el valor del Usuario.
-      for (const key in yearFound) {
-        if (yearFound.hasOwnProperty(key)) {
-          const element = yearFound[key];
-          if (key == userValue ) {
-            yearResult = yearValue.substr(0, 4);
-            userResult = element;
-          } //for if If
-        } //For IF
-      } // For
+    //Dentro de un ciclo FOR buscamos las Key y comparamos con el valor del Usuario.
+    for (const key in yearFound) {
+      const injuredPerson = key
+      if (yearFound.hasOwnProperty(key)) {
+        const element = yearFound[key];
+        if (key == userValue) {
+          yearResult = yearValue.substr(0, 4);
+          userResult = element;
+          injuredPerson;
+        }
+      }
+    }
     return [yearResult, userResult]
   }, //Consult
-  order: (injuriesBy, yearValue, userValue) => {
-    let yearFind = "";
+
+  allData: (injuriesBy, yearValue, userValue) => {
+    let allValue = []
     injuriesBy.forEach(element => {
       let year = element.Year;
-      let moto = element.Total_Injured_Persons_Motorcyclists;
-      let bike = element.Total_Injured_Persons_Pedalcyclists;
-      let walk = element.Total_Injured_Persons_Pedestrians;
-      let transit = element.Total_Injured_Persons_Transit_Total;
-        if (yearValue === year && userValue === "all") {
-            yearFind = [year.substr(0,4), moto, bike, walk, transit];
-        }
-      }) //ForEach
-      return yearFind;
-  },//Order
+      if (yearValue === year && userValue === "all") {
+        allValue.push(["Motociclistas", element.Total_Injured_Persons_Motorcyclists],
+          ["Peatones", element.Total_Injured_Persons_Pedestrians],
+          ["Ciclistas", element.Total_Injured_Persons_Pedalcyclists],
+          ["Automovilistas", element.Total_Injured_Persons_Transit_Total])
+      }
+    })
+    return allValue
+  }, //AllData 
 }; //window

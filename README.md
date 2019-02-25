@@ -77,10 +77,10 @@ Por ejemplo _window.data = {} para el test ya que cipher se encuentra dentro del
 
 ## Checklist
 
-- [ ] Usa VanillaJS.
-- [ ] No hace uso de `this`.
-- [ ] Pasa linter (`npm pretest`)
-- [ ] Pasa tests (`npm test`)
+- [x] Usa VanillaJS.
+- [x] No hace uso de `this`.
+- [x] Pasa linter (`npm pretest`)
+- [x] Pasa tests (`npm test`)
 - [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
       lines y branches.
 - [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
