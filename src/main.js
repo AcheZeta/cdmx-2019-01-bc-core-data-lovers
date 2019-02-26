@@ -36,7 +36,7 @@ const drawTable = (allValue) => {
     window.data.orderData(allValue)
     tableArea.innerHTML = `<tr><th colspan = "2">${yearV.substr(0,4)}</th></tr>`;
     for (let i = 0; i < allValue.length; i++) {
-      const column = `<tr><td>${sortTable[i][0]}</td><td>${sortTable[i][1]}</td>`
+      const column = `<tr><td>${allValue[i][0]}</td><td>${allValue[i][1]}</td>`
       const row = document.createElement("tr");
       row.innerHTML = column;
       tableArea.appendChild(row)
