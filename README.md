@@ -73,7 +73,7 @@ Primera Etapa:
 - Hameyalli Elizalde Acevedo - [AcheZeta](https://github.com/AcheZeta)
 
 Segunda Etapa:
-- Hameyalli Elizalde Acevedo - [AcheZeta](https://github.com/AcheZeta)
+- Hameyalli - [AcheZeta](https://github.com/AcheZeta)
 
 ## Expresiones de Gratitud 🌟 
 - A los coaches, especialmente a [John](https://github.com/Jonhks) 🤘🏾
