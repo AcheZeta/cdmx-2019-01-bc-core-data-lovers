@@ -284,7 +284,7 @@ p {
 }
 
 table {
-  width: 50%;
+  width: 70%;
   text-align: center;
   margin: 1% 1% 1% 10%;
 }
@@ -464,8 +464,17 @@ footer {
 }
 
 .select {
-    padding: 1%;
-    text-align: center;
+  padding: 5%;
+  text-align: center;
+}
+
+.find {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0%;
+  font-size: 90;
+  margin: 0%;
 }
 
 }
@@ -477,13 +486,13 @@ footer {
   }
 
   .logo {
-    width: 13%;
+    width: 7%;
     height: auto;
     padding: 3%;
-  }
+}
 
   .info {
-    margin-block-start: 10%;
+    margin-block-start: 8%;
 }
 
   .know {
@@ -497,7 +506,7 @@ footer {
     color: white;
     text-align: center;
     margin-block-start: 0%;
-    padding: 7%;
+    padding: 4%;
 }
 
   #totalInjured {
@@ -562,6 +571,11 @@ footer {
 .question {
   padding: 2%;
 }
+.select {
+  padding: 5%;
+  text-align: center;
+}
+
 }
 
 /*
@@ -583,7 +597,7 @@ footer {
   }
 
   .info {
-    margin-block-start: 1%;
+    margin-block-start: 8%;
 }
 
 

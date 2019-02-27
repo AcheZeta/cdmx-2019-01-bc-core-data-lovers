@@ -25,7 +25,6 @@ describe('allData', () => {
   });
   it('Debería devolver el año 2010 y 82000,52000,70000,25222,  al elegir 2010 y TODOS LOS HERIDOS', () => {
     expect(window.data.allData(window.INJURIES, "2010-01-04", "all")).toEqual([
-      ["Año:", "2010"],
       ["Motociclistas", 82000],
       ["Peatones", 70000],
       ["Ciclistas", 52000],
@@ -34,7 +33,6 @@ describe('allData', () => {
   });
   it('Debería devolver el año 2015 y 88000,45000,70000,24252,  al elegir 2015 y TODOS LOS HERIDOS', () => {
     expect(window.data.allData(window.INJURIES, "2015-01-04", "all")).toEqual([
-      ["Año:", "2015"],
       ["Motociclistas", 88000],
       ["Peatones", 70000],
       ["Ciclistas", 45000],
@@ -43,10 +41,9 @@ describe('allData', () => {
   });
 });
 
-describe('drawTable', () => {
+describe('orderData', () => {
   it('Debería devolver los datos ordenados de menor a mayor al pulsar el botón ordenar', () => {
-    expect(window.data.drawTable(window.INJURIES, "2012-01-04", "all")).toEqual([
-      ["Año:", "2012"],
+    expect(window.data.orderData(window.INJURIES, "2012-01-04", "all")).toEqual([
       ["Automovilistas", 23345],
       ["Ciclistas", 49000],
       ["Peatones", 76000],

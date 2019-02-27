@@ -1,6 +1,6 @@
 //window es un objeto global que contiene la funcion consult.
 window.data = {
-  
+
   //Consult filtra el objeto apartir de año. 
   consult: (injuriesBy, yearValue, userValue) => {
     //Variables que guardan en resultado de la busqueda
@@ -35,5 +35,9 @@ window.data = {
       }
     })
     return allValue
-  }, //AllData 
+  }, //AllData
+  orderData: (allValue) => {
+    let sortTable = allValue.sort((a, b) => a[1] - b[1])
+    return sortTable
+  }
 }; //window
