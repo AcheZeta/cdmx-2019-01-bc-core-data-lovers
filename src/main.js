@@ -12,8 +12,69 @@ let resultArea = document.getElementById("result");
 let tableArea = document.getElementById('tableD');
 //boton de ordenar 
 let orden = document.getElementById('orden')
+let infoSecc = document.getElementById('info')
+let knowSecc = document.getElementById('know')
+let faqSecc = document.getElementById('faq')
 //Variable que contiene el resultado
 let sortTable = []
+
+const printInfo = () => {
+  infoSecc.innerHTML = `<h3 id="title">Cada año entre 20 millones y 50 millones de personas sufren traumatismos,
+  como consecuencia de accidentes de tránsito. </h3><br>
+<p id="infoSecI">
+  En <b>PUNTO MUERTO</b> creemos importante prevenir accidentes viales en la población
+  de jóvenes, por la proximidad de acceder a una licencia de conducir y
+  ser este un momento propicio para fomentar conductas responsables trabajando de la mano de
+  Instituciones Gubernamentales y Educativas.<br> </p>
+<br>`
+  knowSecc.innerHTML = `
+  <h2> HECHOS FUNDAMENTALES </h2>
+    <p id="totalParraph">
+
+      Tan solo en el 2015, 1 de cada 2 percances automovilísticos
+      fueron entre jóvenes y se relacionan con el consumo de alcohol,la velocidad,
+      la conducción bajos los efectos de drogas y el envío de mensajes de texto.<br><br>
+      Las tasas de mortalidad por accidentes de tránsito
+      son <b>3 veces</b> mayores en países en desarrollo como México.
+
+    </p>
+    <p class="find">
+    Usa nuestro buscador para realizar una consulta
+    </p>
+    
+    <p id="totalInjured"> Total de heridos <br> 2’443,175 </p>
+
+    <figure>
+      <img src="images/car.png" alt="PuntoMuerto" class="icon">
+      <img src="images/crossing.png" alt="PuntoMuerto" class="icon">
+      <img src="images/moto.png" alt="PuntoMuerto" class="icon">
+      <img src="images/bike.png" alt="PuntoMuerto" class="icon">
+
+    </figure>`
+
+  faqSecc.innerHTML = `<h2 id="fqa"> FAQ </h2>
+  <p class="question"> <b> ¿Qué es punto muerto?</b><br>
+    Es una campaña de prevención contra accidentes de transito en adolescentes
+    que tiene como objetivo concientizar y prevenir los accidentes que comprometen
+    la vida de nuestra población. </p>
+  <p class="question"> <b> ¿A quién se dirige esta campaña? </b><br>
+    Está dirigida a adolescentes de 17 y 18 años que tienen acceso a la licencia
+    de conducir </p>
+  <p class="question"><b> ¿Qué medidas puedo realizar para evitar accidentes?</b><br>
+    Respetar los limites de velocidad.<br>
+    Uso de casco por ciclistas y motociclistas.<br>
+    Protección para niños en automoviles como asientos
+    para lactantes y niños, elevadores y cinturones de seguridad. </p>
+  <p class="question"> <b> ¿De dónde son los datos que consulto?</b><br>
+    Los datos que consultas son del <a href="https://www.bts.gov/content/transportation-fatalities-mode">Departamento
+      de Transporte</a></p>
+  <p class="question"><b> ¿Qué medidas debo tomar si soy peaton? </b><br>
+    Evita caminar por carriles bici o por la calzada.<br>
+    Cruza siempre en línea recta y por el paso de peatones o los pasos con semáforo.<br>
+    Antes de cruzar una calle, mira bien a derecha e izquierda.</p>`
+}
+printInfo()
+
 
 //Función que pinta la habla predeterminada
 const drawTable = (allValue) => {
