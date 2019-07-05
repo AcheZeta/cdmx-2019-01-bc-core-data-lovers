@@ -15,8 +15,15 @@ let orden = document.getElementById('orden')
 let infoSecc = document.getElementById('info')
 let knowSecc = document.getElementById('know')
 let faqSecc = document.getElementById('faq')
+let totalSecc = document.getElementById('total')
 //Variable que contiene el resultado
 let sortTable = []
+let imagesTransport = [
+  "images/bike_w.png",
+  "images/pedestrian-walking.png",
+  "images/bicycle.png",
+  "images/front-car.png"
+]
 
 const printInfo = () => {
   infoSecc.innerHTML = `<h3 id="title">Cada año entre 20 millones y 50 millones de personas sufren traumatismos,
@@ -40,17 +47,7 @@ const printInfo = () => {
     </p>
     <p class="find">
     Usa nuestro buscador para realizar una consulta
-    </p>
-    
-    <p id="totalInjured"> Total de heridos <br> 2’443,175 </p>
-
-    <figure>
-      <img src="images/car.png" alt="PuntoMuerto" class="icon">
-      <img src="images/crossing.png" alt="PuntoMuerto" class="icon">
-      <img src="images/moto.png" alt="PuntoMuerto" class="icon">
-      <img src="images/bike.png" alt="PuntoMuerto" class="icon">
-
-    </figure>`
+    </p>`
 
   faqSecc.innerHTML = `<h2 id="fqa"> FAQ </h2>
   <p class="question"> <b> ¿Qué es punto muerto?</b><br>
@@ -75,6 +72,18 @@ const printInfo = () => {
 }
 printInfo()
 
+const printData = (allValue) => {
+  let yearV = yearButton.value;
+  //Mantener libre resultArea
+  totalSecc.innerHTML = '';
+  totalSecc.innerHTML = `<div>${yearV.substr(0,4)}</div>`
+
+  //Por cada elemento de la data pintara columna y fila
+  for (let i = 0; i < allValue.length; i++) {
+    console.log(allValue[i][0])
+    totalSecc.insertAdjacentHTML("beforeend", `<img src="${imagesTransport[i]}" alt=${allValue[i][0]}" class="image"><div>${allValue[i][0]}</div><div>${allValue[i][1]}</div>`)
+  }
+}
 
 //Función que pinta la habla predeterminada
 const drawTable = (allValue) => {
@@ -114,6 +123,7 @@ searchButton.addEventListener("click", () => {
   if (userValue === 'all') {
     const AllResult = window.data.allData(injuriesBy, yearValue, userValue);
     drawTable(AllResult)
+    printData(AllResult)
   } else {
     tableArea.innerHTML = '';
     const resultData = window.data.consult(injuriesBy, yearValue, userValue);
