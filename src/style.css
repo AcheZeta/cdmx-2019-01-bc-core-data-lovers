@@ -117,7 +117,8 @@ nav.mob,
 
 .select,
 .total,
-.faq {
+.faq,
+.tableData {
   background-color: black;
   color: white;
   margin-block-end: 0%;
@@ -140,6 +141,14 @@ nav.mob,
   padding: 0.5%;
   align-content: center;
 }
+
+.transportType{
+  display: inline-block;
+  width: 10%;
+  height: auto;
+  padding: 5%;
+}
+
 
 
 /* body {

@@ -56,8 +56,7 @@ const printInfo = () => {
       fueron entre jóvenes y se relacionan con el consumo de alcohol,la velocidad,
       la conducción bajos los efectos de drogas y el envío de mensajes de texto.<br><br>
       Las tasas de mortalidad por accidentes de tránsito
-      son <b>3 veces</b> mayores en países en desarrollo como México.
-
+      son <b>3 veces</b> mayores en países en desarrollo como México. <br>
     </p>
     <p class="find">
     Usa nuestro buscador para realizar una consulta
@@ -89,13 +88,13 @@ printInfo()
 const printData = (allValue) => {
   let yearV = yearButton.value;
   //Mantener libre resultArea
-  totalSecc.innerHTML = '';
-  totalSecc.innerHTML = `<div>${yearV.substr(0,4)}</div>`
+  totalSecc.innerHTML = `
+  <h2> La cantidad de heridos Durante <b>${yearV.substr(0,4)}</b> </h2>`;
 
   //Por cada elemento de la data pintara columna y fila
   for (let i = 0; i < allValue.length; i++) {
     console.log(allValue[i][0])
-    totalSecc.insertAdjacentHTML("beforeend", `<img src="${imagesTransport[i]}" alt=${allValue[i][0]}" class="image"><div>${allValue[i][0]}</div><div>${allValue[i][1]}</div>`)
+    totalSecc.insertAdjacentHTML("beforeend", `<img src="${imagesTransport[i]}" alt=${allValue[i][0]}" class="transportType"> ${allValue[i][1]}`)
   }
 }
 
