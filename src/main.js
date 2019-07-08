@@ -12,10 +12,15 @@ let resultArea = document.getElementById("result");
 let tableArea = document.getElementById('tableD');
 //boton de ordenar 
 let orden = document.getElementById('orden')
+//Secciones donde se pinta la información en la página. 
 let infoSecc = document.getElementById('info')
 let knowSecc = document.getElementById('know')
 let faqSecc = document.getElementById('faq')
 let totalSecc = document.getElementById('total')
+//Boton del menú
+let mobBtn = document.getElementById('navbtn')
+//Nav Mobile
+let mobNav = document.getElementById('mobileNav')
 //Variable que contiene el resultado
 let sortTable = []
 let imagesTransport = [
@@ -24,6 +29,15 @@ let imagesTransport = [
   "images/bicycle.png",
   "images/front-car.png"
 ]
+
+mobBtn.addEventListener("click", () => {
+  if (mobNav.style.display === "none") {
+    mobNav.style.display = "block"
+  } else {
+    mobNav.style.display = "none"
+  }
+});
+
 
 const printInfo = () => {
   infoSecc.innerHTML = `<h3 id="title">Cada año entre 20 millones y 50 millones de personas sufren traumatismos,

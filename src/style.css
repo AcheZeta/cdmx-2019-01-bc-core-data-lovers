@@ -1,3 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.container nav.desk,
+.container nav.mob {
+  width: 100%;
+  background: white;
+  height: 10%;
+  box-shadow: 0, 2px, 2px, 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav.desk ul {
+  list-style: none;
+  width: 65%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+nav.desk ul li {
+  width: 20%;
+  float: left;
+  text-align: center;
+  line-height: 60px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+nav ul li :hover {
+  background: black;
+}
+
+nav ul li.active {
+  background: black;
+}
+
+nav ul li a {
+  color: #eb008b;
+  text-decoration: none;
+}
+
+nav.mob,
+.hamburger-btn {
+  display: none;
+
+}
+
+@media screen and (max-width: 700px) {
+  nav.desk {
+    display: none;
+  }
+
+  nav.mob,
+  .hamburger-btn {
+    display: block;
+  }
+
+  .hamburger-btn {
+    position: relative;
+  }
+
+  .hamburger-btn .fa-bars,
+  .hamburger-btn .fa-times {
+    position: fixed;
+    right: 25px;
+    top: 15px;
+    font-size: 35px;
+    color: #eb008b;
+    cursor: pointer;
+  }
+
+  .mob ul {
+    margin-top: 60px;
+    background: white;
+    display: none;
+  }
+
+  .mob li {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+  }
+}
+
+.logo {
+  width: 5%;
+  height: auto;
+  padding: 0%;
+}
+
+.info {
+  background-color: #eb008b;
+  margin-block-end: 0%;
+  margin-block-start: 5%;
+  text-align: center;
+  padding: 10%;
+  margin-block-start: 5%;
+  font-family: sans-serif;
+}
+
+.know {
+  background-color: black;
+  color: white;
+  margin-block-end: 0%;
+  margin-block-start: 0%;
+  text-align: center;
+  padding: 5%;
+  font-family: sans-serif;
+}
+
+.select,
+.total,
+.faq {
+  background-color: black;
+  color: white;
+  margin-block-end: 0%;
+  margin-block-start: 0%;
+  text-align: center;
+  padding: 5%;
+  font-family: sans-serif;
+}
+
+.photos {
+  background-color: #eb008b;
+  text-align: center;
+  align-content: center;
+  padding: 5%;
+  vertical-align: bottom;
+}
+
+.galleryPic {
+  width: 30%;
+  padding: 0.5%;
+  align-content: center;
+}
+
+
+/* body {
+  background-color: black;
+}
 nav {
   display: block;
 }
@@ -41,19 +188,18 @@ h3 {
   color: white;
   font-family: sans-serif;
   text-align: center;
-  margin-block-start: 25%;
+  margin-block-start: 8%;
 }
 
 p {
   color: white;
   font-family: sans-serif;
   text-align: justify;
-  padding: 10%;
-  font-size: 14px;
+  font-size: 100%;
   margin: 0;
-}
+} */
 
-.logo {
+/* .logo {
   width: 20%;
   height: auto;
   padding: 3%;
@@ -74,33 +220,33 @@ p {
 .menu_list {
   list-style: none;
   font-family: sans-serif;
-}
+} */
 
-.nav__item {
+/* .nav__item {
   display: block;
   width: 70%;
   margin: 0 auto;
   line-height: 4;
   position: relative;
-  /*Le damos una posición relativa para posteriormente añadirle el triangulo que indica que se está en la página actual del menú*/
+  Le damos una posición relativa para posteriormente añadirle el triangulo que indica que se está en la página actual del menú
   border-bottom: .5px solid rgba(59, 62, 61, 1);
   border-top: .5px solid rgba(59, 62, 61, 1);
   background-color: transparent;
   color: rgba(221, 231, 228, 1);
-}
+} */
 
-.menu-toogle {
+/* .menu-toogle {
   position: absolute;
-  /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
+  Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado
   line-height: 1.1;
   text-align: center;
   top: 6.5px;
-  /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+  Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú
   right: 8px;
   border-radius: 3px;
   background-color: transparent;
   transition: all .5s ease;
-  /*Añadimos una transición para que realice un desplazamineto suave*/
+  Añadimos una transición para que realice un desplazamineto suave
   z-index: 10;
 }
 
@@ -113,7 +259,7 @@ p {
 .checkbox {
   float: right;
   display: none;
-  /*Ocultamos el checkbox pues no nos interesa que se vea*/
+  Ocultamos el checkbox pues no nos interesa que se vea
 }
 
 .menu-toogle::before {
@@ -133,39 +279,39 @@ p {
 .checkbox {
   float: right;
   display: none;
-  /*Ocultamos el checkbox pues no nos interesa que se vea*/
+  Ocultamos el checkbox pues no nos interesa que se vea
 }
 
 .checkbox:checked~.sidebar {
   right: 0px;
-  /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+  Le quitamos el left negativo para que el menú vuelva a su posición original
   position: fixed;
-  /* Fijamos el menú lateral para que se desplace cuando hagamos scroll*/
+  Fijamos el menú lateral para que se desplace cuando hagamos scroll
 }
 
 .checkbox:checked~.main-w {
   margin-right: 200px;
-  /*Cuando el checkbox asigna un margen al contenedor principal para que se desplace junto con el menú*/
+  Cuando el checkbox asigna un margen al contenedor principal para que se desplace junto con el menú
 }
 
 .checkbox:checked~.menu-toogle {
   right: 208px;
   position: fixed;
-  /*Fijamos la hamburgues para que se desplace junto con el menú*/
+  Fijamos la hamburgues para que se desplace junto con el menú
 }
 
 .checkbox:checked~.main-w {
   margin-right: 200px;
-  /*Cuando el checkbox asigna un margen al contenedor principal para que se desplace junto con el menú*/
+  Cuando el checkbox asigna un margen al contenedor principal para que se desplace junto con el menú
 }
 
 .checkbox:checked~.menu-toogle {
   right: 208px;
   position: fixed;
-  /*Fijamos la hamburgues para que se desplace junto con el menú*/
-}
+  Fijamos la hamburgues para que se desplace junto con el menú
+} */
 
-.info {
+/* .info {
   background-color: #eb008b;
   width: auto;
   height: 100%;
@@ -176,9 +322,9 @@ p {
   font-family: sans-serif;
   padding: 7%;
   font-kerning: none;
-}
+} */
 
-.button1 {
+/* .button1 {
   text-align: center;
   background: #231f20;
   width: 50%;
@@ -220,12 +366,19 @@ p {
   height: auto;
   padding: 5%;
   margin-left: 3%;
-}
-
+} */
+/* 
 .know {
   background-color: black;
   width: auto;
   height: 100%;
+  margin-block-end: 0%;
+  margin-block-start: 0%;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 7%;
+  font-kerning: none;
 }
 
 
@@ -257,9 +410,9 @@ p {
 
 .consulta {
   text-align: center;
-}
+} */
 
-.select {
+/* .select {
   padding: 10%;
   text-align: center;
 }
@@ -308,10 +461,10 @@ footer {
   height: 100%;
   text-align: center;
 
-}
+} */
 
 
-.redes {
+/* .redes {
   width: 55%;
   height: auto;
   padding-top: 8%;
@@ -335,10 +488,10 @@ footer {
 }
 
 #knowMore {
-    color: white;
-    text-align: center;
-    margin-block-start: 0%;
-    padding: 4%;
+  color: white;
+  text-align: center;
+  margin-block-start: 0%;
+  padding: 4%;
 }
 
 #menu {
@@ -364,7 +517,7 @@ footer {
   color: white;
   text-decoration: none;
   display: inline-block;
-}
+} */
 
 
 /*
@@ -372,7 +525,7 @@ footer {
   ##Screen = 1281px to higher resolution desktops
 */
 
-@media (min-width: 1380px) {
+/* @media (min-width: 1380px) {
 
   header {
     width: 100%;
@@ -400,7 +553,7 @@ footer {
     text-align: center;
     margin-block-start: 0%;
     padding: 7%;
-}
+  }
 
   #totalInjured {
     color: #eb008b;
@@ -416,7 +569,7 @@ footer {
     font-family: sans-serif;
     text-align: center;
     margin-block-start: 1%;
-}
+  }
 
   .icon {
     display: inline-block;
@@ -428,11 +581,11 @@ footer {
   p {
     color: white;
     font-family: sans-serif;
-    text-align: justify;
+    text-align: center;
     padding: 4%;
-    font-size: 100%;
+    font-size: 110%;
     margin: 0;
-}
+  }
 
   .fqa {
     background-color: black;
@@ -458,28 +611,29 @@ footer {
     margin-block-start: 0%;
     margin-block-end: 0%;
     margin: auto;
-}
-.question {
-  padding: 0%;
-}
+  }
 
-.select {
-  padding: 5%;
-  text-align: center;
-}
+  .question {
+    padding: 0%;
+  }
 
-.find {
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-  padding: 0%;
-  font-size: 90;
-  margin: 0%;
-}
+  .select {
+    padding: 5%;
+    text-align: center;
+  }
 
-}
+  .find {
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0%;
+    font-size: 90;
+    margin: 0%;
+  }
 
+} */
 
+/* 
 @media (min-width: 1024px) and (max-width: 1380px) {
   header {
     width: 100%;
@@ -489,11 +643,11 @@ footer {
     width: 7%;
     height: auto;
     padding: 3%;
-}
+  }
 
   .info {
     margin-block-start: 8%;
-}
+  }
 
   .know {
     background-color: black;
@@ -507,7 +661,7 @@ footer {
     text-align: center;
     margin-block-start: 0%;
     padding: 4%;
-}
+  }
 
   #totalInjured {
     color: #eb008b;
@@ -523,7 +677,7 @@ footer {
     font-family: sans-serif;
     text-align: center;
     margin-block-start: 1%;
-}
+  }
 
   .icon {
     display: inline-block;
@@ -537,7 +691,7 @@ footer {
     font-family: sans-serif;
     text-align: center;
     padding: 4%;
-    font-size: 14px;
+    font-size: 100%;
     margin: 0;
   }
 
@@ -567,23 +721,25 @@ footer {
     margin-block-start: 0%;
     margin-block-end: 0%;
     margin: auto;
-}
-.question {
-  padding: 2%;
-}
-.select {
-  padding: 5%;
-  text-align: center;
-}
+  }
 
-}
+  .question {
+    padding: 2%;
+  }
+
+  .select {
+    padding: 5%;
+    text-align: center;
+  }
+
+} */
 
 /*
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 766px) and (max-width: 1024px) {
+/* @media (min-width: 766px) and (max-width: 1024px) {
 
   header {
     width: 100%;
@@ -597,8 +753,8 @@ footer {
   }
 
   .info {
-    margin-block-start: 8%;
-}
+    margin-block-start: 0%;
+  }
 
 
   .icon {
@@ -635,11 +791,12 @@ footer {
     margin-block-start: 0%;
     margin-block-end: 0%;
     margin: auto;
-}
-.question {
-  padding: 2%;
-}
-}
+  }
+
+  .question {
+    padding: 2%;
+  }
+} */
 
 
 /*
@@ -647,7 +804,7 @@ footer {
   ##Screen = B/w 481px to 767px
 */
 
-@media (min-width: 300px) and (max-width: 767px) {
+/* @media (min-width: 300px) and (max-width: 767px) {
 
   header {
     width: 100%;
@@ -658,8 +815,7 @@ footer {
     width: auto;
     height: 100%;
     margin-block-end: 0%;
-    margin-block-start: 10%
-    color: white;
+    margin-block-start: 10% color: white;
     text-align: justify;
     font-family: sans-serif;
     padding: 11%;
@@ -683,14 +839,14 @@ footer {
     font-family: sans-serif;
     text-align: center;
     margin-block-start: 1%;
-}
+  }
 
-.icon {
-      display: inline-block;
-      width: 24%;
-      height: auto;
-      padding: 11%;
-      margin-left: 3%;
+  .icon {
+    display: inline-block;
+    width: 24%;
+    height: auto;
+    padding: 11%;
+    margin-left: 3%;
   }
 
   .image {
@@ -715,6 +871,6 @@ footer {
     margin-block-start: 0%;
     margin-block-end: 0%;
     margin: auto;
-}
+  }
 
-}
+} */
