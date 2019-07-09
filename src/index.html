@@ -15,7 +15,7 @@
     <nav class="desk">
       <!-- <img src="images/logo.png" alt="PuntoMuerto" class="logo"> -->
       <ul class="menu_list">
-        <li class="active"><a href="#info" class="nav__item current">ACERCA DE</a></li>
+        <li><a href="#info" class="nav__item current">ACERCA DE</a></li>
         <li><a href="#total" class="nav__item">HECHOS</a></li>
         <li><a href="#know" class="nav__item">CONOCE MÁS</a></li>
         <li><a href="#photos" class="nav__item">GALERIA</a></li>
@@ -44,10 +44,7 @@
 
   <section id="info" class="info"></section>
 
-  <section id="know" class="know">
-    
-  </section>
-  <section id="total" class="total"></section>
+  <section id="know" class="know"></section>
 
   <section id="inputSecc">
     <form class="select">
@@ -64,6 +61,7 @@
         <option class="year" value="2014-01-04">2014</option>
         <option class="year" value="2015-01-04">2015</option>
       </select>
+      <br>
       <select id="user" name="user" class="selector">
         <option value="all">TODOS LOS HERIDOS</option>
         <option value="Total_Injured_Persons_Motorcyclists">MOTOCICLISTAS</option>
@@ -71,11 +69,13 @@
         <option value="Total_Injured_Persons_Pedalcyclists">CICLISTAS</option>
         <option value="Total_Injured_Persons_Transit_Total">AUTOMOVILISTAS</option>
       </select>
-
+      <br>
       <input id="search" class="button" type="button" value="CONSULTA">
-      <input id="orden" class="button" type="button" value="Orden">
+      <input id="orden" class="button" type="button" value="ORDENAR TABLA">
     </form>
   </section>
+
+  <section id="total" class="total"></section>
 
   <section id="result" class="result"></section>
 
@@ -96,7 +96,7 @@
 
   <section id="faq" class="faq"></section>
 
-  <footer>
+  <footer class="footerSecc">
     <figure>
       <p id="footer"> Página desarrollada por Hame E. y Andie C. </p>
     </figure>

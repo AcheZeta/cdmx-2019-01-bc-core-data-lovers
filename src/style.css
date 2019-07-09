@@ -51,6 +51,31 @@ nav.mob,
 
 }
 
+.selector{
+  color: #eb008b;
+  font-size: 1rem;
+  margin: 1em 1em;
+  width: auto;
+  background-color: transparent;
+  cursor: pointer;
+  border: transparent;
+}
+
+.footerSecc{
+  color: white;
+  background-color: #eb008b;
+  text-align: center;
+}
+
+.button{
+  background-color: #eb008b;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #eb008b;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  text-align: center;
+}
+
 @media screen and (max-width: 700px) {
   nav.desk {
     display: none;
@@ -117,8 +142,7 @@ nav.mob,
 
 .select,
 .total,
-.faq,
-.tableData {
+.faq {
   background-color: black;
   color: white;
   margin-block-end: 0%;
@@ -126,6 +150,27 @@ nav.mob,
   text-align: center;
   padding: 5%;
   font-family: sans-serif;
+  margin-right:auto
+}
+
+.tableData{
+  text-align: -webkit-center;
+  background-color: black;
+  height: auto;
+  width: 100%;
+  margin-block-start: 0%;
+  margin-block-end: 0%;
+  margin: auto;
+}
+
+td, th {
+  border: 1px solid #ffffff;
+  background: black;
+  color: aliceblue;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 2%;
+  width: 1%;
 }
 
 .photos {

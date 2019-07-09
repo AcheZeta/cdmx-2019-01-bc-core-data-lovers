@@ -62,24 +62,33 @@ const printInfo = () => {
     Usa nuestro buscador para realizar una consulta
     </p>`
 
-  faqSecc.innerHTML = `<h2 id="fqa"> FAQ </h2>
+  faqSecc.innerHTML = `<h2 id="fqa"> FAQ </h2> <br>
   <p class="question"> <b> ¿Qué es punto muerto?</b><br>
+  <br>
     Es una campaña de prevención contra accidentes de transito en adolescentes
     que tiene como objetivo concientizar y prevenir los accidentes que comprometen
     la vida de nuestra población. </p>
+    <br>
   <p class="question"> <b> ¿A quién se dirige esta campaña? </b><br>
-    Está dirigida a adolescentes de 17 y 18 años que tienen acceso a la licencia
+  <br>  
+  Está dirigida a adolescentes de 17 y 18 años que tienen acceso a la licencia
     de conducir </p>
+    <br>
   <p class="question"><b> ¿Qué medidas puedo realizar para evitar accidentes?</b><br>
-    Respetar los limites de velocidad.<br>
+  <br>  
+  Respetar los limites de velocidad.<br>
     Uso de casco por ciclistas y motociclistas.<br>
     Protección para niños en automoviles como asientos
     para lactantes y niños, elevadores y cinturones de seguridad. </p>
+    <br>
   <p class="question"> <b> ¿De dónde son los datos que consulto?</b><br>
-    Los datos que consultas son del <a href="https://www.bts.gov/content/transportation-fatalities-mode">Departamento
+  <br>  
+  Los datos que consultas son del <a href="https://www.bts.gov/content/transportation-fatalities-mode">Departamento
       de Transporte</a></p>
+      <br>
   <p class="question"><b> ¿Qué medidas debo tomar si soy peaton? </b><br>
-    Evita caminar por carriles bici o por la calzada.<br>
+  <br>  
+  Evita caminar por carriles bici o por la calzada.<br>
     Cruza siempre en línea recta y por el paso de peatones o los pasos con semáforo.<br>
     Antes de cruzar una calle, mira bien a derecha e izquierda.</p>`
 }
@@ -94,7 +103,7 @@ const printData = (allValue) => {
   //Por cada elemento de la data pintara columna y fila
   for (let i = 0; i < allValue.length; i++) {
     console.log(allValue[i][0])
-    totalSecc.insertAdjacentHTML("beforeend", `<img src="${imagesTransport[i]}" alt=${allValue[i][0]}" class="transportType"> ${allValue[i][1]}`)
+    totalSecc.insertAdjacentHTML("beforeend", `<img src="${imagesTransport[i]}" alt=${allValue[i][0]}" class="transportType"> <b>${allValue[i][1]}</b>`)
   }
 }
 
