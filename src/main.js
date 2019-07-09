@@ -50,8 +50,8 @@ const printInfo = () => {
 <br>`
   knowSecc.innerHTML = `
   <h2> HECHOS FUNDAMENTALES </h2>
+  <br>
     <p id="totalParraph">
-
       Tan solo en el 2015, 1 de cada 2 percances automovilísticos
       fueron entre jóvenes y se relacionan con el consumo de alcohol,la velocidad,
       la conducción bajos los efectos de drogas y el envío de mensajes de texto.<br><br>
@@ -103,7 +103,7 @@ const printData = (allValue) => {
   //Por cada elemento de la data pintara columna y fila
   for (let i = 0; i < allValue.length; i++) {
     console.log(allValue[i][0])
-    totalSecc.insertAdjacentHTML("beforeend", `<img src="${imagesTransport[i]}" alt=${allValue[i][0]}" class="transportType"> <b>${allValue[i][1]}</b>`)
+    totalSecc.insertAdjacentHTML("beforeend", `<div class="injuredPerson"><img src="${imagesTransport[i]}" alt=${allValue[i][0]}" class="transportType"></div><div class="numeralResult"><b>${allValue[i][1]}</b></div>`)
   }
 }
 
