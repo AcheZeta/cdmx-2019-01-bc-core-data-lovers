@@ -43,7 +43,7 @@ describe('allData', () => {
 
 describe('orderData', () => {
   it('Debería devolver los datos ordenados de menor a mayor al pulsar el botón ordenar', () => {
-    expect(window.data.orderData(window.INJURIES, "2012-01-04", "all")).toEqual([
+    expect(window.data.orderData(["Peatones", 76000],["Motociclistas", 93000],["Ciclistas", 49000],["Automovilistas", 23345])).toEqual([
       ["Automovilistas", 23345],
       ["Ciclistas", 49000],
       ["Peatones", 76000],

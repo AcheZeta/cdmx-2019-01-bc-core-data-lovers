@@ -7,44 +7,47 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Punto muerto</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <header>
-    <figure>
-      <img src="images/logo.png" alt="PuntoMuerto" class="logo">
-      <input type="checkbox" class="checkbox" id="menu-toogle" />
-      <label for="menu-toogle" class="menu-toogle"></label>
-      <nav class="sidebar">
-        <ul class="menu_list">
-          <li><a href="#info" class="nav__item current">ACERCA DE</a></li>
-          <li><a href="#total" class="nav__item">HECHOS</a></li>
-          <li><a href="#know" class="nav__item">CONOCE MÁS</a></li>
-          <li><a href="#photos" class="nav__item">GALERIA</a></li>
-          <li><a href="#fqa" class="nav__item">FQA's</a></li>
-        </ul>
-      </nav>
-    </figure>
-  </header>
+  <div id="deskNav" class="container">
+    <nav class="desk">
+      <img src="images/puntoMuertoLogo.png" alt="PuntoMuerto" class="logo">
+      <ul class="menu_list">
+        <li><a href="#info" class="nav__item current">ACERCA DE</a></li>
+        <li><a href="#total" class="nav__item">HECHOS</a></li>
+        <li><a href="#know" class="nav__item">CONOCE MÁS</a></li>
+        <li><a href="#photos" class="nav__item">GALERIA</a></li>
+        <li><a href="#fqa" class="nav__item">FAQ's</a></li>
+      </ul>
+    </nav>
 
-  <section id="info" class="info">
+    <nav id="mobNav" class="mob">
+      <img src="images/puntoMuertoLogo.png" alt="PuntoMuerto" class="logo">
+      <div id="navbtn" class="hamburger-btn">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
 
-    <h3 id="title">Cada año entre 20 millones y 50 millones de personas sufren traumatismos,
-      como consecuencia de accidentes de tránsito. </h3><br>
-    <p id="infoSecI">
-      En <b>PUNTO MUERTO</b> creemos importante prevenir accidentes viales en la población
-      de jóvenes, por la proximidad de acceder a una licencia de conducir y
-      ser este un momento propicio para fomentar conductas responsables trabajando de la mano de
-      Instituciones Gubernamentales y Educativas.<br> </p>
-    <br>
+      <ul id="mobileNav" class="menu_list">
+        <li><a href="#info" class="nav__item current">ACERCA DE</a></li>
+        <li><a href="#total" class="nav__item">HECHOS</a></li>
+        <li><a href="#know" class="nav__item">CONOCE MÁS</a></li>
+        <li><a href="#photos" class="nav__item">GALERIA</a></li>
+        <li><a href="#fqa" class="nav__item">FAQ's</a></li>
+      </ul>
+    </nav>
 
-  </section>
+    <div class="header">
+    </div>
+  </div>
 
-  <section id="know" class="know">
-    <h4 id="knowMore"> ¿Sabes cuantos heridos ha habido en los últimos años?</h4>
-    <p class="find">
-      Usa nuestro buscador para realizar una consulta
-    </p>
+
+  <section id="info" class="info"></section>
+
+  <section id="know" class="know"></section>
+
+  <section id="inputSecc">
     <form class="select">
       <select id="yearbttn" name="year" class="selector">
         <option selected value="2015-01-04"> AÑO </option>
@@ -59,6 +62,7 @@
         <option class="year" value="2014-01-04">2014</option>
         <option class="year" value="2015-01-04">2015</option>
       </select>
+      <br>
       <select id="user" name="user" class="selector">
         <option value="all">TODOS LOS HERIDOS</option>
         <option value="Total_Injured_Persons_Motorcyclists">MOTOCICLISTAS</option>
@@ -66,72 +70,34 @@
         <option value="Total_Injured_Persons_Pedalcyclists">CICLISTAS</option>
         <option value="Total_Injured_Persons_Transit_Total">AUTOMOVILISTAS</option>
       </select>
-
+      <br>
       <input id="search" class="button" type="button" value="CONSULTA">
-      <input id="orden" class="button" type="button" value="Orden">
-
+      <input id="orden" class="button" type="button" value="ORDENAR TABLA">
     </form>
   </section>
 
-  <section id="result" class="result">
-  </section>
+  <section id="total" class="total"></section>
+
+  <section id="result" class="result"></section>
+
   <section id="tableData" class="tableData">
     <table>
       <tbody id="tableD"></tbody>
     </table>
   </section>
 
-  <section id="total" class="total">
-    <h2> HECHOS FUNDAMENTALES </h2>
-    <p id="totalParraph">
 
-      Tan solo en el 2015, 1 de cada 2 percances automovilísticos
-      fueron entre jóvenes y se relacionan con el consumo de alcohol,la velocidad,
-      la conducción bajos los efectos de drogas y el envío de mensajes de texto.<br><br>
-      Las tasas de mortalidad por accidentes de tránsito
-      son <b>3 veces</b> mayores en países en desarrollo como México.
-
-    </p>
-    <p id="totalInjured"> Total de heridos <br> 2’443,175 </p>
-    <figure>
-      <img src="images/car.png" alt="PuntoMuerto" class="icon">
-      <img src="images/crossing.png" alt="PuntoMuerto" class="icon">
-      <img src="images/moto.png" alt="PuntoMuerto" class="icon">
-      <img src="images/bike.png" alt="PuntoMuerto" class="icon">
-
-    </figure>
-  </section>
 
   <section id="photos" class="photos">
-    <h2 class="gallery">GALERIA</h2>
-    <img src="images/way.png" alt="PuntoMuerto" class="image">
-    <img src="images/cros.png" alt="PuntoMuerto" class="image">
-    <img src="images/incident.png" alt="PuntoMuerto" class="image">
+    <h2 class="gallery">GALERIA</h2><br>
+    <img src="images/way.png" alt="PuntoMuerto" class="galleryPic">
+    <img src="images/cros.png" alt="PuntoMuerto" class="galleryPic">
+    <img src="images/incident.png" alt="PuntoMuerto" class="galleryPic">
   </section>
 
-  <section id="faq" class="faq">
-    <h2 id="fqa"> FAQ </h2>
-    <p class="question"> <b> ¿Qué es punto muerto?</b><br>
-      Es una campaña de prevención contra accidentes de transito en adolescentes
-      que tiene como objetivo concientizar y prevenir los accidentes que comprometen
-      la vida de nuestra población. </p>
-    <p class="question"> <b> ¿A quién se dirige esta campaña? </b><br>
-      Está dirigida a adolescentes de 17 y 18 años que tienen acceso a la licencia
-      de conducir </p>
-    <p class="question"><b> ¿Qué medidas puedo realizar para evitar accidentes?</b><br>
-      Respetar los limites de velocidad.<br>
-      Uso de casco por ciclistas y motociclistas.<br>
-      Protección para niños en automoviles como asientos
-      para lactantes y niños, elevadores y cinturones de seguridad. </p>
-    <p class="question"> <b> ¿De dónde son los datos que consulto?</b><br>
-      Los datos que consultas son del <a href="https://www.bts.gov/content/transportation-fatalities-mode">Departamento
-        de Transporte</a></p>
-    <p class="question"><b> ¿Qué medidas debo tomar si soy peaton? </b><br>
-      Evita caminar por carriles bici o por la calzada.<br>
-      Cruza siempre en línea recta y por el paso de peatones o los pasos con semáforo.<br>
-      Antes de cruzar una calle, mira bien a derecha e izquierda.</p>
-  </section>
-  <footer>
+  <section id="faq" class="faq"></section>
+
+  <footer class="footerSecc">
     <figure>
       <p id="footer"> Página desarrollada por Hame E. y Andie C. </p>
     </figure>

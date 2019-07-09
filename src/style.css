@@ -1,720 +1,225 @@
-nav {
-  display: block;
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
 }
 
-header {
+.container nav.desk,
+.container nav.mob .container {
+  width: 100%;
   background: white;
-  display: inline-block;
-  vertical-align: top;
+  height: 10%;
   position: fixed;
   top: 0;
-  left: 0;
 }
 
-figure {
-  margin: 1%;
-  display: inline-block;
+nav.desk ul {
+  list-style: none;
+  width: 60%;
+  height: 20px;
+  margin-left: 20%;
+  margin-top: -2%;
+}
+
+nav.desk ul li {
+  width: 20%;
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+nav ul :hover {
+  background: black;
+}
+
+nav ul li a {
+  color: #eb008b;
+  text-decoration: none;
+}
+
+nav.mob,
+.hamburger-btn {
+  display: none;
+
 }
 
 td,
 th {
-  border: 1px solid #ffffff;
-  background: black;
-  color: aliceblue;
+  border: 1px solid black;
+  background: white;
+  color: black;
   text-align: center;
   font-family: sans-serif;
-  padding: 2%;
+  padding: 1%;
   width: 1%;
 }
 
-th {
+.selector {
   color: #eb008b;
+  font-size: 1rem;
+  margin: 1em 1em;
+  width: auto;
+  background-color: transparent;
+  cursor: pointer;
+  border: transparent;
 }
 
-h2 {
-  color: white;
-  font-family: sans-serif;
+.footerSecc {
+  color: black;
+  background-color: #eb008b;
   text-align: center;
+  padding: 2%;
 }
 
-h3 {
-  color: white;
-  font-family: sans-serif;
+.button {
+  background-color: #eb008b;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #eb008b;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
   text-align: center;
-  margin-block-start: 25%;
-}
-
-p {
-  color: white;
-  font-family: sans-serif;
-  text-align: justify;
-  padding: 10%;
-  font-size: 14px;
-  margin: 0;
 }
 
 .logo {
-  width: 20%;
+  width: 5%;
   height: auto;
-  padding: 3%;
-}
-
-.sidebar {
-  position: absolute;
-  width: 200px;
-  height: 100vh;
-  top: 0;
-  right: -205px;
-  padding-top: 47px;
-  background-color: rgba(29, 33, 32, 1);
-  border-left: 4px solid rgb(235, 0, 139);
-  transition: all .5s ease;
-}
-
-.menu_list {
-  list-style: none;
-  font-family: sans-serif;
-}
-
-.nav__item {
-  display: block;
-  width: 70%;
-  margin: 0 auto;
-  line-height: 4;
-  position: relative;
-  /*Le damos una posición relativa para posteriormente añadirle el triangulo que indica que se está en la página actual del menú*/
-  border-bottom: .5px solid rgba(59, 62, 61, 1);
-  border-top: .5px solid rgba(59, 62, 61, 1);
-  background-color: transparent;
-  color: rgba(221, 231, 228, 1);
-}
-
-.menu-toogle {
-  position: absolute;
-  /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
-  line-height: 1.1;
-  text-align: center;
-  top: 6.5px;
-  /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
-  right: 8px;
-  border-radius: 3px;
-  background-color: transparent;
-  transition: all .5s ease;
-  /*Añadimos una transición para que realice un desplazamineto suave*/
-  z-index: 10;
-}
-
-.menu-toogle::before {
-  content: "☰";
-  font-size: 33px;
-  color: #eb008b;
-}
-
-.checkbox {
-  float: right;
-  display: none;
-  /*Ocultamos el checkbox pues no nos interesa que se vea*/
-}
-
-.menu-toogle::before {
-  content: "☰";
-  font-size: 33px;
-  color: #eb008b;
-}
-
-.tableData {
-  height: auto;
-  width: 100%;
-  margin-block-start: 3%;
-  margin-block-end: 3%;
-
-}
-
-.checkbox {
-  float: right;
-  display: none;
-  /*Ocultamos el checkbox pues no nos interesa que se vea*/
-}
-
-.checkbox:checked~.sidebar {
-  right: 0px;
-  /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
-  position: fixed;
-  /* Fijamos el menú lateral para que se desplace cuando hagamos scroll*/
-}
-
-.checkbox:checked~.main-w {
-  margin-right: 200px;
-  /*Cuando el checkbox asigna un margen al contenedor principal para que se desplace junto con el menú*/
-}
-
-.checkbox:checked~.menu-toogle {
-  right: 208px;
-  position: fixed;
-  /*Fijamos la hamburgues para que se desplace junto con el menú*/
-}
-
-.checkbox:checked~.main-w {
-  margin-right: 200px;
-  /*Cuando el checkbox asigna un margen al contenedor principal para que se desplace junto con el menú*/
-}
-
-.checkbox:checked~.menu-toogle {
-  right: 208px;
-  position: fixed;
-  /*Fijamos la hamburgues para que se desplace junto con el menú*/
+  padding: 0%;
+  margin: 1%;
 }
 
 .info {
   background-color: #eb008b;
-  width: auto;
-  height: 100%;
-  margin-block-end: 0%;
-  margin-block-start: 15%;
-  color: white;
+  margin-block-start: 5%;
   text-align: center;
+  padding: 15%;
   font-family: sans-serif;
-  padding: 7%;
-  font-kerning: none;
-}
-
-.button1 {
-  text-align: center;
-  background: #231f20;
-  width: 50%;
-  height: auto;
-  border-radius: 4%;
-  padding: 5%;
-}
-
-
-.button {
-  margin: 5%;
-  padding: 2%;
-  text-align: center;
-  background-color: #ddd;
-  border: none;
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 16px;
-}
-
-
-.total {
-  background-color: black;
-  width: auto;
-  height: 100%;
-  padding: 5%;
-  color: #eb008b;
-  display: block;
-}
-
-.icon {
-  display: inline-block;
-  width: 39%;
-  height: auto;
-  padding: 5%;
-  margin-left: 3%;
+  height: -webkit-fill-available;
+  font-size: 100%;
 }
 
 .know {
   background-color: black;
-  width: auto;
-  height: 100%;
-}
-
-
-.find {
-
   color: white;
-  font-family: sans-serif;
+  margin-block-end: 0%;
+  margin-block-start: 0%;
   text-align: center;
-  padding: 2%;
-  font-size: 90;
-  margin: 2%;
-
-}
-
-.image {
-  display: block;
-  width: 99%;
-  height: auto;
-  padding: 0.5%;
-  padding-block-start: 7%;
-}
-
-.imagepeaton {
-  display: block;
-  width: 99%;
-  height: auto;
-  padding: 0.5%;
-}
-
-.consulta {
-  text-align: center;
-}
-
-.select {
-  padding: 10%;
-  text-align: center;
-}
-
-.selector {
-  border-radius: 10px;
-  padding: 2%;
-  background: #f2f1f0;
-  border-color: transparent;
-}
-
-.consult {
-  margin: 2%;
-  text-align: center;
-  margin-top: 1%;
-  padding: 1%;
-}
-
-.result {
-  text-align: center;
+  padding: 5%;
   font-family: sans-serif;
 }
 
-table {
-  width: 70%;
+.select,
+.total,
+.faq {
+  background-color: black;
+  color: white;
+  margin-block-end: 0%;
+  margin-block-start: 0%;
   text-align: center;
-  margin: 1% 1% 1% 10%;
+  padding: 5%;
+  font-family: sans-serif;
+  margin-right: auto
+}
+
+.tableData {
+  text-align: -webkit-center;
+  background-color: black;
+  height: auto;
+  width: 60%;
+  margin-block-start: 0%;
+  margin-block-end: 0%;
+  margin: auto;
 }
 
 .photos {
   background-color: #eb008b;
-  width: auto;
-  height: 100%;
+  text-align: center;
   align-content: center;
-  margin-block-start: 0%;
-  vertical-align: bottom;
-}
-
-.question {
   padding: 5%;
-}
-
-footer {
-  background-color: #231f20;
-  width: auto;
-  height: 100%;
-  text-align: center;
-
-}
-
-
-.redes {
-  width: 55%;
-  height: auto;
-  padding-top: 8%;
-}
-
-.final {
-  width: 100%;
   vertical-align: bottom;
-  margin-top: 8%;
+  color: #ffffff;
 }
 
-.faq {
-  background: black;
+.galleryPic {
+  width: 30%;
+  padding: 0.5%;
+  align-content: center;
 }
 
-#footer {
-  font-size: 60%;
-  text-align: center;
-  vertical-align: bottom;
-  padding-top: 8%;
-}
-
-#knowMore {
-    color: white;
-    text-align: center;
-    margin-block-start: 0%;
-    padding: 4%;
-}
-
-#menu {
+.transportType {
+  display: inline-block;
   width: 10%;
   height: auto;
-  vertical-align: top;
+  padding: 5%;
+}
+
+.injuredPerson {
   padding: 2%;
-  padding-top: 9%;
-  float: right;
-  margin: 0%;
 }
 
-#totalInjured {
-  color: #eb008b;
-  font-family: sans-serif;
-  padding: 10px;
-  font-size: 28px;
-  text-align: center;
-  margin: 0%;
-}
-
-#consulta {
-  color: white;
-  text-decoration: none;
-  display: inline-block;
+.numeralresult {
+  padding: 2%;
 }
 
 
-/*
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
+@media screen and (max-width: 700px) {
+  nav.desk {
+    display: none;
+  }
 
-@media (min-width: 1380px) {
-
-  header {
+  nav.mob,
+  .hamburger-btn {
+    display: block;
     width: 100%;
+    background: white;
+    height: 10%;
+    position: fixed;
+    top: 0;
   }
 
-  .logo {
-    width: 10%;
-    height: auto;
-    padding: 3%;
+  .hamburger-btn {
+    position: fixed;
   }
 
-  .info {
-    margin-block-start: 5%;
+  .hamburger-btn .fa-bars,
+  .hamburger-btn .fa-times {
+    position: fixed;
+    right: 25px;
+    top: 15px;
+    font-size: 35px;
+    color: #eb008b;
+    cursor: pointer;
   }
 
-  .know {
-    background-color: black;
-    width: auto;
-    height: 100%;
+  .mob ul {
+    margin-top: 60px;
+    background: white;
+    display: none;
+  }
+
+  .mob li {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  .galleryPic {
+    color: #ffffff;
+    width: 90%;
+    padding: 5%;
     align-content: center;
   }
 
-  #knowMore {
-    color: white;
-    text-align: center;
-    margin-block-start: 0%;
-    padding: 7%;
-}
-
-  #totalInjured {
-    color: #eb008b;
-    font-family: sans-serif;
-    padding: 3%;
-    font-size: 115%;
-    text-align: center;
-    margin: 0%;
-  }
-
-  h3 {
-    color: white;
-    font-family: sans-serif;
-    text-align: center;
-    margin-block-start: 1%;
-}
-
-  .icon {
-    display: inline-block;
-    width: 10%;
-    height: auto;
-    padding: 5%;
-  }
-
-  p {
-    color: white;
-    font-family: sans-serif;
-    text-align: justify;
-    padding: 4%;
-    font-size: 100%;
-    margin: 0;
-}
-
-  .fqa {
-    background-color: black;
-  }
-
-  .image {
-    width: 32%;
-    height: auto;
-    padding: 0.5%;
-    padding-block-start: 0%;
-    display: inline-block;
-  }
-
-  table {
-    width: 50%;
-    text-align: center;
-    margin: auto;
-  }
-
   .tableData {
+    text-align: -webkit-center;
+    background-color: white;
     height: auto;
-    width: 80%;
-    margin-block-start: 0%;
-    margin-block-end: 0%;
-    margin: auto;
-}
-.question {
-  padding: 0%;
-}
-
-.select {
-  padding: 5%;
-  text-align: center;
-}
-
-.find {
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-  padding: 0%;
-  font-size: 90;
-  margin: 0%;
-}
-
-}
-
-
-@media (min-width: 1024px) and (max-width: 1380px) {
-  header {
     width: 100%;
-  }
-
-  .logo {
-    width: 7%;
-    height: auto;
-    padding: 3%;
-}
-
-  .info {
-    margin-block-start: 8%;
-}
-
-  .know {
-    background-color: black;
-    width: auto;
-    height: 100%;
-    align-content: center;
-  }
-
-  #knowMore {
-    color: white;
-    text-align: center;
-    margin-block-start: 0%;
-    padding: 4%;
-}
-
-  #totalInjured {
-    color: #eb008b;
-    font-family: sans-serif;
-    padding: 3%;
-    font-size: 115%;
-    text-align: center;
-    margin: 0%;
-  }
-
-  h3 {
-    color: white;
-    font-family: sans-serif;
-    text-align: center;
-    margin-block-start: 1%;
-}
-
-  .icon {
-    display: inline-block;
-    width: 10%;
-    height: auto;
-    padding: 5%;
-  }
-
-  p {
-    color: white;
-    font-family: sans-serif;
-    text-align: center;
-    padding: 4%;
-    font-size: 14px;
-    margin: 0;
-  }
-
-  .faq {
-    background-color: black;
-  }
-
-  .image {
-    width: 30%;
-    height: auto;
-    padding: 0.5%;
-    padding-block-start: 0%;
-    display: inline-block;
-  }
-
-  table {
-
-    width: 50%;
-    text-align: center;
-    margin: auto;
-
-  }
-
-  .tableData {
-    height: auto;
-    width: 80%;
     margin-block-start: 0%;
     margin-block-end: 0%;
     margin: auto;
-}
-.question {
-  padding: 2%;
-}
-.select {
-  padding: 5%;
-  text-align: center;
-}
-
-}
-
-/*
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 766px) and (max-width: 1024px) {
-
-  header {
-    width: 100%;
   }
-
-
-  .logo {
-    width: 8%;
-    height: auto;
-    padding: 3%;
-  }
-
-  .info {
-    margin-block-start: 8%;
-}
-
-
-  .icon {
-    display: inline-block;
-    width: 15%;
-    height: auto;
-    padding: 5%;
-    margin-left: 3%;
-  }
-
-  .sidebar {
-    right: -656px;
-    padding-top: 47px;
-  }
-
-  .image {
-    display: inline-block;
-    width: 30%;
-    height: auto;
-    padding: 1%;
-    padding-block-start: 7%;
-    margin: 0%;
-  }
-
-  .gallery {
-    padding: 2%;
-    text-align: center;
-    margin: 0%;
-  }
-
-  .tableData {
-    height: auto;
-    width: 80%;
-    margin-block-start: 0%;
-    margin-block-end: 0%;
-    margin: auto;
-}
-.question {
-  padding: 2%;
-}
-}
-
-
-/*
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media (min-width: 300px) and (max-width: 767px) {
-
-  header {
-    width: 100%;
-  }
-
-  .info {
-    background-color: #eb008b;
-    width: auto;
-    height: 100%;
-    margin-block-end: 0%;
-    margin-block-start: 10%
-    color: white;
-    text-align: justify;
-    font-family: sans-serif;
-    padding: 11%;
-    font-kerning: none;
-  }
-
-  .logo {
-    width: 10%;
-    height: auto;
-    padding: 3%;
-  }
-
-
-  .sidebar {
-    right: -435px;
-    padding-top: 47px;
-  }
-
-  h3 {
-    color: white;
-    font-family: sans-serif;
-    text-align: center;
-    margin-block-start: 1%;
-}
-
-.icon {
-      display: inline-block;
-      width: 24%;
-      height: auto;
-      padding: 11%;
-      margin-left: 3%;
-  }
-
-  .image {
-    display: inline-block;
-    width: 30%;
-    height: auto;
-    padding: 1%;
-    padding-block-start: 7%;
-    margin: 0%;
-  }
-
-  h2 {
-    color: white;
-    font-family: sans-serif;
-    text-align: center;
-    padding: 3%;
-  }
-
-  .tableData {
-    height: auto;
-    width: 80%;
-    margin-block-start: 0%;
-    margin-block-end: 0%;
-    margin: auto;
-}
 
 }
